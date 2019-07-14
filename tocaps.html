@@ -18,11 +18,11 @@
             var text= document.getElementById("in").value;
             var out="";
             for(var i=0;i<text.length;i++){
-                if(text[i]!=" "){
-                    out+=":regional_indicator_"+text[i].toLowerCase()+": ";
-                }else{
-                    out+="  ";
-                }
+                    if("qwertyuiopasdfghjkzxcvbnm".includes(text[i].toLowerCase())){
+                        out+=":regional_indicator_"+text[i].toLowerCase()+": ";
+                    }else{
+                        out+=text[i]+" "
+                    }
             }
             document.getElementById("out").innerHTML=out;
         }
