@@ -20,6 +20,8 @@
             for(var i=0;i<text.length;i++){
                 if(text[i]!=" "){
                     out+=":regional_indicator_"+text[i].toLowerCase()+": ";
+                }else{
+                    out=" ";
                 }
             }
             document.getElementById("out").innerHTML=out;
