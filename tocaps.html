@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body style="background-color: #666666; margin: 6px;">
+    <div class="row">
+        <div class="col-6">
+        <input type="text" class="form-control" id="in" style=" margin: 6px;"/>
+        <input type="button" onclick="convert()" value="Bigify"/>
+        <label id="out" style="color: aliceblue;font-weight: bold;border:aliceblue 1px solid; border-radius: 6px; padding: 6px;margin: 6px;"></label>
+        </div>
+    </div>
+    </body>
+    <script type="text/javascript">
+
+        function convert(){
+            var text= document.getElementById("in").value;
+            var out="";
+            for(var i=0;i<text.length;i++){
+                
+                out+=":regional_indicator_"+text[i].toLowerCase()+": ";
+            }
+            document.getElementById("out").innerHTML=out;
+        }
+    </script>
+</html>
